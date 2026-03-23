@@ -1,0 +1,53 @@
+# 🧬 Protein Classification using ProtBERT
+
+This project implements a structural bioinformatics pipeline to classify human proteins into **Enzymes (1)** and **Non-Enzymes (0)** based on their amino acid sequences using the **ProtBERT** transformer model.
+
+## 📁 Project Structure
+
+```text
+Labs/
+├── data/
+│   ├── raw/                 # Original UniProt dataset (gzipped TSV)
+│   └── processed/           # ProtBERT embeddings and labels (.npy arrays)
+├── Notebooks/
+│   ├── 01_data_prep_and_embedding.ipynb     # Preprocessing & feature extraction
+│   └── 02_model_training_and_evaluation.ipynb # Neural Network & RF training
+├── results/                 # Exported metrics, reports, and confusion matrices
+├── .venv/                   # Python Virtual Environment
+└── requirements.txt         # Project dependencies
+```
+
+## 🚀 Workflow
+
+### 1. Data Preparation & Embedding Extraction
+Run `Notebooks/01_data_prep_and_embedding.ipynb` to:
+- Load raw UniProt data.
+- Sample a balanced dataset of 2000 proteins (1000 enzymes / 1000 non-enzymes).
+- Extract 1024-dimensional contextual embeddings using **ProtBERT**.
+- Save the processed features to `data/processed/`.
+
+### 2. Model Training & Evaluation
+Run `Notebooks/02_model_training_and_evaluation.ipynb` to:
+- Load the pre-computed embeddings.
+- Train and compare two models: **Random Forest** and **Multi-Layer Perceptron (Neural Network)**.
+- Evaluate performance using Accuracy, Precision, Recall, and F1-score.
+- Export results to the `results/` folder.
+
+## 🛠️ Installation
+
+Ensure you have Python 3.10+ installed.
+
+1.  **Activate Virtual Environment**:
+    ```powershell
+    .\.venv\Scripts\activate
+    ```
+2.  **Install Dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## 📊 Results Summary
+
+- **Primary Model**: Multi-Layer Perceptron (Base Neural Network).
+- **Performance**: Achieves high precision (~93%) and strong overall F1-score (~87%).
+- **Key Visuals**: See `results/confusion_matrix_base.png` for a detailed performance breakdown.

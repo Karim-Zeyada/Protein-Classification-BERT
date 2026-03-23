@@ -1,0 +1,24 @@
+# Python virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Data files (optional, but good practice to ignore processed files)
+data/processed/
+*.npy
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Results (optional, ignore if you only want code)
+# results/

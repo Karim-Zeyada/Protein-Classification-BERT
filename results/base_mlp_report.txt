@@ -1,0 +1,14 @@
+Base Neural Network Classification Report
+=========================================
+
+                precision    recall  f1-score   support
+
+Non-Enzyme (0)       0.84      0.94      0.88       200
+    Enzyme (1)       0.93      0.81      0.87       200
+
+      accuracy                           0.88       400
+     macro avg       0.88      0.88      0.88       400
+  weighted avg       0.88      0.88      0.88       400
+
+Overall Accuracy: 0.8775
+Overall F1-Score: 0.8693
