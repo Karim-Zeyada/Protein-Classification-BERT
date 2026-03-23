@@ -1,0 +1,5 @@
+5-Fold Cross-Validation F1-Scores
+=================================
+
+Random Forest Mean F1: 0.8157 (+/- 0.0222)
+Base MLP Mean F1:      0.8575 (+/- 0.0294)

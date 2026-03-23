@@ -1,4 +1,4 @@
-﻿annotated-doc==0.0.4
+annotated-doc==0.0.4
 anyio==4.12.1
 asttokens==3.0.1
 certifi==2026.2.25
@@ -18,6 +18,11 @@ hf-xet==1.4.2
 httpcore==1.0.9
 httpx==0.28.1
 huggingface_hub==1.7.1
+shap
+umap-learn
+llvmlite
+pynndescent
+numba==1.7.1
 idna==3.11
 ipykernel==7.2.0
 ipython==9.11.0
