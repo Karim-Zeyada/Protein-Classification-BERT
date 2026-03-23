@@ -30,7 +30,9 @@ Run `Notebooks/01_data_prep_and_embedding.ipynb` to:
 Run `Notebooks/02_model_training_and_evaluation.ipynb` to:
 - Load the pre-computed embeddings.
 - Train and compare two models: **Random Forest** and **Multi-Layer Perceptron (Neural Network)**.
-- Evaluate performance using Accuracy, Precision, Recall, and F1-score.
+- **5-Fold Cross-Validation:** Statistical validation to ensure model stability (Mean F1: ~0.87 for MLP).
+- **ROC and Precision-Recall Curves:** Visual diagnostics for classification thresholds.
+- **Detailed Classification Reports:** Precision, Recall, and F1-score for each class.
 - Export results to the `results/` folder.
 
 ## 🛠️ Installation
