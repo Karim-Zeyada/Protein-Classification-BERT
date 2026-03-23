@@ -39,9 +39,10 @@ Run `Notebooks/02_model_training_and_evaluation.ipynb` to:
 
 ### 3. Explainable AI (XAI) & Visualization
 Run `Notebooks/03_explainability_and_visualization.ipynb` to:
-- **UMAP Prediction:** Visualize the high-dimensional protein embedding space in 2D.
-- **SHAP Analysis:** Identify which embedding dimensions are most influential for enzyme classification.
-- **Global Interpretability:** Understand the model's decision-making process.
+- **SHAP Analysis (Feature Importance):** Identify which embedding dimensions are most influential for enzyme classification.
+    - *Note: Compatible with updated SHAP library outputs by indexing `shap_values[:, :, 1]` for binary classes.*
+- **UMAP Projection:** Visualize the high-dimensional protein embedding space in 2D to observe class separation.
+- **Global Interpretability:** Understand the model's decision-making process across the entire dataset.
 
 ## 🛠️ Installation
 
@@ -59,5 +60,12 @@ Ensure you have Python 3.10+ installed.
 ## 📊 Results Summary
 
 - **Primary Model**: Multi-Layer Perceptron (Base Neural Network).
-- **Performance**: Achieves high precision (~93%) and strong overall F1-score (~87%).
-- **Key Visuals**: See `results/confusion_matrix_base.png` for a detailed performance breakdown.
+- **Performance**: Achieves high precision (~93%) and strong overall F1-score (~86%).
+- **Cross-Validation**: 5-Fold CV shows stable performance:
+    - **Random Forest**: 0.82 F1-score
+    - **Base MLP**: 0.86 F1-score
+- **Key Visuals**:
+    - `results/confusion_matrix_base.png`: Prediction breakdown.
+    - `results/roc_pr_curves.png`: Classification threshold performance.
+    - `results/shap_summary.png`: Influential ProtBERT dimensions.
+    - `results/umap_projection.png`: 2D Embedding separation.
