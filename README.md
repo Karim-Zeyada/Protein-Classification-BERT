@@ -11,10 +11,15 @@ Labs/
 │   └── processed/           # ProtBERT embeddings and labels (.npy arrays)
 ├── Notebooks/
 │   ├── 01_data_prep_and_embedding.ipynb     # Preprocessing & feature extraction
-│   └── 02_model_training_and_evaluation.ipynb # Neural Network & RF training
-├── results/                 # Exported metrics, reports, and confusion matrices
+│   ├── 02_model_training_and_evaluation.ipynb # Training, CV & ROC/PR curves
+│   └── 03_explainability_and_visualization.ipynb # XAI: UMAP & SHAP analysis
+├── results/                 # Exported metrics, plots, and reports
+│   ├── roc_pr_curves.png    # ROC and Precision-Recall plots
+│   ├── shap_summary.png     # SHAP feature importance plot
+│   └── umap_projection.png  # 2D UMAP embedding clustering
 ├── .venv/                   # Python Virtual Environment
-└── requirements.txt         # Project dependencies
+├── requirements.txt         # Project dependencies
+└── README.md                # Project documentation
 ```
 
 ## 🚀 Workflow
